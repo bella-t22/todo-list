@@ -73,7 +73,7 @@ h2 {
 /* main styles */
 .main {
     background-color: rgb(13, 58, 72);
-    padding: 50px;
+    padding: 30px 50px;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 }
@@ -111,6 +111,12 @@ h2 {
     color:rgb(127, 162, 173);
     font-size: 1.3rem;
     font-weight: 700;
+}
+
+/* project styles */
+.main-content {
+    display: flex;
+    gap: 50px;
 }
 
 .project-card {
@@ -160,4 +166,89 @@ h2 {
     border: none;
     border-radius: 50%;
     background-color: red;
+}
+
+/* task popup styles */
+.task-popup {
+    background-color: rgb(208, 231, 237);
+    width: 250px;
+    height: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 5px solid rgb(127, 162, 173);
+    border-radius: 20px;
+}
+
+.popup-title {
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.task-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-input {
+    border: none;
+    border-bottom: 1px solid rgb(13, 58, 72);
+    height: 1.3rem;
+    font-family: 'Mina', sans-serif;
+    background-color:rgb(208, 231, 237);
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkbox-div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.red-label {
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    background-color: red; 
+}
+
+.orange-label {
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    background-color: orange; 
+}
+
+.yellow-label {
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    background-color: yellow;
+}
+
+.submit-task {
+    align-self: center;
+    background-color: rgb(13, 58, 72);
+    font-family: 'Mina', sans-serif;
+    color:rgb(208, 231, 237);
+    border: 2px solid rgb(127, 162, 173);
+    border-radius: 15px;
+    width: 80px;
+    height: 25px;
+    padding: 5px;
+    text-align: center;
 }

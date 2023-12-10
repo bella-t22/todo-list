@@ -58,9 +58,13 @@ addTaskBtn.classList.add('add-task-btn');
 addTaskBtn.textContent = 'Add Task';
 addTaskDiv.appendChild(addTaskBtn);
 
+const mainContent = document.createElement('div');
+mainContent.classList.add('main-content');
+main.appendChild(mainContent);
+
 const projectCard = document.createElement('div');
 projectCard.classList.add('project-card');
-main.appendChild(projectCard);
+mainContent.appendChild(projectCard);
 
 const task = document.createElement('div');
 task.classList.add('task');
