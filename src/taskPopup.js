@@ -1,4 +1,5 @@
-const mainContent = document.querySelector('.main-content');
+const taskPopup = () => {
+    const mainContent = document.querySelector('.main-content');
 
 const popup = document.createElement('div');
 popup.classList.add('task-popup');
@@ -111,3 +112,6 @@ const addBtn = document.createElement('btn');
 addBtn.classList.add('submit-task');
 addBtn.textContent = 'Add';
 taskForm.appendChild(addBtn);
+};
+
+export {taskPopup};
