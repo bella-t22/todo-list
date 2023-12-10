@@ -19,7 +19,6 @@ sidebar.appendChild(addProjectDiv);
 const createIcon = document.createElement('img');
 createIcon.classList.add('create-icon');
 // createIcon.src = getCreateIcon;
-console.log(getCreateIcon)
 addProjectDiv.appendChild(createIcon);
 
 const addProject = document.createElement('p');
@@ -32,10 +31,32 @@ firstProject.classList.add('project-names');
 firstProject.textContent = 'First Project';
 sidebar.appendChild(firstProject);
 
+const mainTitleDiv = document.createElement('div');
+mainTitleDiv.classList.add('main-title-div');
+main.appendChild(mainTitleDiv);
+
 const mainTitle = document.createElement('h1');
 mainTitle.classList.add('main-title');
 mainTitle.textContent = 'First Project';
-main.appendChild(mainTitle);
+mainTitleDiv.appendChild(mainTitle);
+
+const projectDueDate = document.createElement('p');
+projectDueDate.classList.add('project-due-date');
+projectDueDate.textContent = '12/29';
+mainTitleDiv.appendChild(projectDueDate);
+
+const addTaskDiv = document.createElement('div');
+addTaskDiv.classList.add('add-task-div');
+main.appendChild(addTaskDiv);
+
+const addTaskIcon = document.createElement('img');
+addTaskIcon.classList.add('create-icon');
+addTaskDiv.appendChild(addTaskIcon);
+
+const addTaskBtn = document.createElement('button');
+addTaskBtn.classList.add('add-task-btn');
+addTaskBtn.textContent = 'Add Task';
+addTaskDiv.appendChild(addTaskBtn);
 
 const projectCard = document.createElement('div');
 projectCard.classList.add('project-card');
