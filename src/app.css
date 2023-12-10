@@ -92,7 +92,42 @@ h2 {
 }
 
 .task {
-    font-size: 1.2rem;
-    padding: 10px;
     border-bottom: 2px solid rgb(208, 231, 237);
+    padding: 15px;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-due-div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.task-title {
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+}
+
+.task-desc {
+    margin: 0;
+    margin-left: 10px;
+}
+
+.task-due-date {
+    margin: 0;
+}
+
+.task-priority {
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    background-color: red;
 }

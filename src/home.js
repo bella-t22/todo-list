@@ -43,8 +43,34 @@ main.appendChild(projectCard);
 
 const task = document.createElement('div');
 task.classList.add('task');
-task.textContent = 'First task';
 projectCard.appendChild(task);
+
+const taskHeader = document.createElement('div');
+taskHeader.classList.add('task-header');
+task.appendChild(taskHeader);
+
+const taskTitle = document.createElement('h3');
+taskTitle.classList.add('task-title');
+taskTitle.textContent = 'First Task';
+taskHeader.appendChild(taskTitle);
+
+const taskDueDiv = document.createElement('div');
+taskDueDiv.classList.add('task-due-div');
+taskHeader.appendChild(taskDueDiv);
+
+const taskDesc = document.createElement('p');
+taskDesc.classList.add('task-desc');
+taskDesc.textContent = 'This is my task description.';
+task.appendChild(taskDesc);
+
+const taskDueDate = document.createElement('p');
+taskDueDate.classList.add('task-due-date');
+taskDueDate.textContent = '12/27';
+taskDueDiv.appendChild(taskDueDate);
+
+const taskPriority = document.createElement('div');
+taskPriority.classList.add('task-priority');
+taskDueDiv.appendChild(taskPriority);
 
 // create default project for todos to be added to
 // create project button to create new projects
