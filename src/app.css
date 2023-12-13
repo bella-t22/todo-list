@@ -197,7 +197,7 @@ h2 {
     flex-direction: column;
 }
 
-.task-input {
+.form-input {
     border: none;
     border-bottom: 1px solid rgb(13, 58, 72);
     height: 1.3rem;
@@ -205,12 +205,12 @@ h2 {
     background-color:rgb(208, 231, 237);
 }
 
-.checkbox-container {
+.radio-container {
     display: flex;
     justify-content: space-between;
 }
 
-.checkbox-div {
+.radio-div {
     display: flex;
     align-items: center;
     gap: 5px;

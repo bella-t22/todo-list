@@ -24,6 +24,7 @@ task.textContent = 'Task:';
 taskDiv.appendChild(task);
 
 const taskInput = document.createElement('input');
+taskInput.classList.add('form-input');
 taskInput.classList.add('task-input');
 taskInput.type = 'text';
 taskDiv.appendChild(taskInput);
@@ -38,7 +39,8 @@ desc.textContent = 'Description:';
 descDiv.appendChild(desc);
 
 const descInput = document.createElement('input');
-descInput.classList.add('task-input');
+descInput.classList.add('form-input');
+descInput.classList.add('desc-input');
 descInput.type = 'text';
 descDiv.appendChild(descInput);
 
@@ -52,7 +54,8 @@ date.textContent = 'Date:';
 dateDiv.appendChild(date);
 
 const dateInput = document.createElement('input');
-dateInput.classList.add('task-input');
+dateInput.classList.add('form-input');
+dateInput.classList.add('date-input');
 dateInput.type = 'date';
 dateDiv.appendChild(dateInput);
 
@@ -65,17 +68,19 @@ priority.classList.add('task-label');
 priority.textContent = 'Priority:';
 priorityDiv.appendChild(priority);
 
-const checkboxContainer = document.createElement('div');
-checkboxContainer.classList.add('checkbox-container');
-priorityDiv.appendChild(checkboxContainer);
+const radioContainer = document.createElement('div');
+radioContainer.classList.add('radio-container');
+priorityDiv.appendChild(radioContainer);
 
 const redDiv = document.createElement('div');
-redDiv.classList.add('checkbox-div');
-checkboxContainer.appendChild(redDiv);
+redDiv.classList.add('radio-div');
+radioContainer.appendChild(redDiv);
 
 const redInput = document.createElement('input');
-redInput.classList.add('checkbox');
-redInput.type = 'checkbox';
+redInput.classList.add('radio');
+redInput.setAttribute('name', 'radio-input');
+redInput.setAttribute('value', 'red');
+redInput.type = 'radio';
 redDiv.appendChild(redInput);
 
 const red = document.createElement('div');
@@ -83,12 +88,14 @@ red.classList.add('red-label');
 redDiv.appendChild(red);
 
 const orangeDiv = document.createElement('div');
-orangeDiv.classList.add('checkbox-div');
-checkboxContainer.appendChild(orangeDiv);
+orangeDiv.classList.add('radio-div');
+radioContainer.appendChild(orangeDiv);
 
 const orangeInput = document.createElement('input');
-orangeInput.classList.add('checkbox');
-orangeInput.type = 'checkbox';
+orangeInput.classList.add('radio');
+orangeInput.setAttribute('name', 'radio-input');
+orangeInput.setAttribute('value', 'orange');
+orangeInput.type = 'radio';
 orangeDiv.appendChild(orangeInput);
 
 const orange = document.createElement('div');
@@ -96,12 +103,14 @@ orange.classList.add('orange-label');
 orangeDiv.appendChild(orange);
 
 const yellowDiv = document.createElement('div');
-yellowDiv.classList.add('checkbox-div');
-checkboxContainer.appendChild(yellowDiv);
+yellowDiv.classList.add('radio-div');
+radioContainer.appendChild(yellowDiv);
 
 const yellowInput = document.createElement('input');
-yellowInput.classList.add('checkbox');
-yellowInput.type = 'checkbox';
+yellowInput.classList.add('radio');
+yellowInput.setAttribute('name', 'radio-input');
+yellowInput.setAttribute('value', 'yellow');
+yellowInput.type = 'radio';
 yellowDiv.appendChild(yellowInput);
 
 const yellow = document.createElement('div');
