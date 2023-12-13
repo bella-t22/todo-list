@@ -1,9 +1,13 @@
 import {taskPopup} from './taskPopup.js';
 
-// make sure task popup cannot be added again if button is pressed again.
 const addTaskBtn = document.querySelector('.add-task-btn');
 addTaskBtn.addEventListener('click', () => {
-    taskPopup();
+    const popup = document.querySelector('.task-popup');
+    if (popup) {
+        return;
+    } else {
+        taskPopup();
+    }
 
     const submitTaskBtn = document.querySelector('.submit-task');
     submitTaskBtn.addEventListener('click', createTask);
