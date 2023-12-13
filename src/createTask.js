@@ -6,9 +6,11 @@ addTaskBtn.addEventListener('click', () => {
     taskPopup();
 
     const submitTaskBtn = document.querySelector('.submit-task');
-    submitTaskBtn.addEventListener('click', () => {
+    submitTaskBtn.addEventListener('click', createTask);
+});
 
-        const projectCard = document.querySelector('.project-card');    
+function createTask() {
+    const projectCard = document.querySelector('.project-card');    
         const task = document.createElement('div');
         task.classList.add('task');
         projectCard.appendChild(task);
@@ -46,6 +48,5 @@ addTaskBtn.addEventListener('click', () => {
 // const taskPriority = document.createElement('div');
 // taskPriority.classList.add('task-priority');
 // taskDueDiv.appendChild(taskPriority);
-    })
-});
+}
 
