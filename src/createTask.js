@@ -9,6 +9,7 @@ addTaskBtn.addEventListener('click', () => {
         taskPopup();
     }
 
+    // button should not be allowed to be pressed if inputs are empty.
     const submitTaskBtn = document.querySelector('.submit-task');
     submitTaskBtn.addEventListener('click', createTask);
 });
@@ -45,12 +46,15 @@ function createTask() {
         taskDueDate.textContent = dateInput.value;
         taskDueDiv.appendChild(taskDueDate);
 
-
         // const radioInput = document.querySelectorAll('.radio');
         // console.log(radioInput.checked);
 
-// const taskPriority = document.createElement('div');
-// taskPriority.classList.add('task-priority');
-// taskDueDiv.appendChild(taskPriority);
+        // const taskPriority = document.createElement('div');
+        // taskPriority.classList.add('task-priority');
+        // taskDueDiv.appendChild(taskPriority);
+
+        taskInput.value = '';
+        descInput.value = '';
+        dateInput.value = '';
 }
 
