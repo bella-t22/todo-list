@@ -37,7 +37,6 @@ addProjectBtn.addEventListener('click', () => {
         // projectCard.classList.add('project-card');
         // mainContent.appendChild(projectCard);
 
-        // close popup once add button is pressed.
         const popup = document.querySelector('.project-popup');
         popup.classList.add('hidden');
         return;

@@ -49,15 +49,19 @@ projectDueDate.classList.add('project-due-date');
 projectDueDate.textContent = '12/29';
 mainTitleDiv.appendChild(projectDueDate);
 
+const mainBtnsDiv = document.createElement('div');
+mainBtnsDiv.classList.add('main-btns-div');
+mainTitleDiv.appendChild(mainBtnsDiv);
+
 const editBtn = document.createElement('button');
 editBtn.classList.add('edit-btn');
 editBtn.textContent = 'Edit';
-mainTitleDiv.appendChild(editBtn);
+mainBtnsDiv.appendChild(editBtn);
 
 const deleteBtn = document.createElement('button');
 deleteBtn.classList.add('delete-btn');
 deleteBtn.textContent = 'Delete';
-mainTitleDiv.appendChild(deleteBtn);
+mainBtnsDiv.appendChild(deleteBtn);
 
 const addTaskDiv = document.createElement('div');
 addTaskDiv.classList.add('add-task-div');

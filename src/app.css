@@ -160,6 +160,11 @@ h2 {
     font-size: 1.5rem;
 }
 
+.main-btns-div {
+    display: flex;
+    gap: 15px;
+}
+
 .edit-btn {
     background-color: rgb(127, 162, 173);
     color:rgb(13, 58, 72);
@@ -223,6 +228,7 @@ h2 {
     border-radius: 20px;
 }
 
+/* task styles */
 .task {
     border-bottom: 2px solid rgb(208, 231, 237);
     color:rgb(13, 58, 72);
@@ -248,9 +254,48 @@ h2 {
     padding: 0;
 }
 
-.task-desc {
+.task-bottom-div {
     margin: 0;
     margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-desc {
+    margin: 0;
+}
+
+.task-btns-div {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-task-btn {
+    background-color: rgb(208, 231, 237);
+    font-family: 'Mina', sans-serif;
+    color:rgb(13, 58, 72);
+    border: 1px solid rgb(13, 58, 72);
+    border-radius: 15px;
+    width: 60px;
+    height: 25px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-task-btn {
+    background-color: rgb(208, 231, 237);
+    font-family: 'Mina', sans-serif;
+    color:rgb(13, 58, 72);
+    border: 1px solid rgb(13, 58, 72);
+    border-radius: 15px;
+    width: 60px;
+    height: 25px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .task-due-date {

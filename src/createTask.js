@@ -45,11 +45,15 @@ function createTask() {
         taskDueDiv.classList.add('task-due-div');
         taskHeader.appendChild(taskDueDiv);
 
+        const taskBottomDiv = document.createElement('div');
+        taskBottomDiv.classList.add('task-bottom-div');
+        task.appendChild(taskBottomDiv);
+
         const taskDesc = document.createElement('p');
         taskDesc.classList.add('task-desc');
         const descInput = document.querySelector('.desc-input');
         taskDesc.textContent = descInput.value;
-        task.appendChild(taskDesc);
+        taskBottomDiv.appendChild(taskDesc);
 
         const taskDueDate = document.createElement('p');
         taskDueDate.classList.add('task-due-date');
@@ -71,6 +75,20 @@ function createTask() {
             taskPriority.classList.add('yellow-label')
             taskDueDiv.appendChild(taskPriority);
         }
+
+        const btnDiv = document.createElement('div');
+        btnDiv.classList.add('task-btns-div');
+        taskBottomDiv.appendChild(btnDiv);
+
+        const editBtn = document.createElement('button');
+        editBtn.classList.add('edit-task-btn');
+        editBtn.textContent = 'Edit';
+        btnDiv.appendChild(editBtn);
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.classList.add('delete-task-btn');
+        deleteBtn.textContent = 'Delete';
+        btnDiv.appendChild(deleteBtn);
 
         // checkmark creation for when task is finished below
         // const check = document.createElement('input');
