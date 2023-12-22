@@ -12,6 +12,7 @@ popup.appendChild(popupTitle);
 
 const taskForm = document.createElement('form');
 taskForm.classList.add('task-form');
+taskForm.setAttribute('action', '/');
 popup.appendChild(taskForm);
 
 const taskDiv = document.createElement('div');
@@ -120,6 +121,7 @@ yellowDiv.appendChild(yellow);
 const addBtn = document.createElement('btn');
 addBtn.classList.add('submit-task');
 addBtn.textContent = 'Add';
+addBtn.setAttribute('type', 'submit');
 taskForm.appendChild(addBtn);
 };
 

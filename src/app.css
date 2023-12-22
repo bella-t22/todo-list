@@ -68,6 +68,7 @@ h2 {
     font-size: 1.2rem;
     font-weight: 700;
     margin: 8px 0;
+    color:rgb(13, 58, 72);
 }
 
 /* main styles */
@@ -129,6 +130,7 @@ h2 {
 
 .task {
     border-bottom: 2px solid rgb(208, 231, 237);
+    color:rgb(13, 58, 72);
     padding: 15px;
 }
 
@@ -171,6 +173,7 @@ h2 {
 /* task popup styles */
 .task-popup {
     background-color: rgb(208, 231, 237);
+    color: rgb(13, 58, 72);
     width: 250px;
     height: 400px;
     padding: 20px;
@@ -203,6 +206,7 @@ h2 {
     height: 1.3rem;
     font-family: 'Mina', sans-serif;
     background-color:rgb(208, 231, 237);
+    color:rgb(13, 58, 72);
 }
 
 .radio-container {
@@ -250,5 +254,7 @@ h2 {
     width: 80px;
     height: 25px;
     padding: 5px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

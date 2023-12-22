@@ -10,8 +10,15 @@ addTaskBtn.addEventListener('click', () => {
     }
 
     // button should not be allowed to be pressed if inputs are empty.
-    const submitTaskBtn = document.querySelector('.submit-task');
-    submitTaskBtn.addEventListener('click', createTask);
+    const submitTask = document.querySelector('.submit-task');
+    submitTask.addEventListener('click', createTask);
+
+    // const taskForm = document.querySelector('.task-form');
+    // taskForm.addEventListener('submit', (e) => {
+    //     console.log('hello there');
+    //     createTask();
+    //     e.preventDefault();
+    // });
 });
 
 function createTask() {
@@ -46,15 +53,29 @@ function createTask() {
         taskDueDate.textContent = dateInput.value;
         taskDueDiv.appendChild(taskDueDate);
 
-        // const radioInput = document.querySelectorAll('.radio');
-        // console.log(radioInput.checked);
-
-        // const taskPriority = document.createElement('div');
-        // taskPriority.classList.add('task-priority');
-        // taskDueDiv.appendChild(taskPriority);
+        const radioInput = document.querySelector("input[type='radio']:checked");
+        console.log(radioInput.value);
+        if (radioInput.value == 'red') {
+            const taskPriority = document.createElement('div');
+            taskPriority.classList.add('red-label');
+            taskDueDiv.appendChild(taskPriority);
+        } else if (radioInput.value == 'orange') {
+            const taskPriority = document.createElement('div');
+            taskPriority.classList.add('orange-label');
+            taskDueDiv.appendChild(taskPriority);
+        } else if (radioInput.value == 'yellow') {
+            const taskPriority = document.createElement('div');
+            taskPriority.classList.add('yellow-label')
+            taskDueDiv.appendChild(taskPriority);
+        }
+        
+        // checkmark creation for when task is finished below
+        // const check = document.createElement('input');
+        // check.classList.add('task-check');
+        // check.type = 'checkbox';
+        // task.appendChild(check);
 
         taskInput.value = '';
         descInput.value = '';
         dateInput.value = '';
 }
-
