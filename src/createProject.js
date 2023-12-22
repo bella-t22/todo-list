@@ -31,6 +31,12 @@ addProjectBtn.addEventListener('click', () => {
         project.textContent = input.value;
         return sidebar.appendChild(project);
 
+        // create individual project card for every new project and give it a unique class?
+        // const mainContent = document.querySelector('.main-content');
+        // const projectCard = document.createElement('div');
+        // projectCard.classList.add('project-card');
+        // mainContent.appendChild(projectCard);
+
         // close popup once add button is pressed.
     }
 });

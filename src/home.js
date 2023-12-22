@@ -1,4 +1,4 @@
-import getCreateIcon from './icons/create.svg';
+// add in icons
 
 const header = document.querySelector('.header');
 const sidebar = document.querySelector('.sidebar');
@@ -48,6 +48,16 @@ const projectDueDate = document.createElement('p');
 projectDueDate.classList.add('project-due-date');
 projectDueDate.textContent = '12/29';
 mainTitleDiv.appendChild(projectDueDate);
+
+const editBtn = document.createElement('button');
+editBtn.classList.add('edit-btn');
+editBtn.textContent = 'Edit';
+mainTitleDiv.appendChild(editBtn);
+
+const deleteBtn = document.createElement('button');
+deleteBtn.classList.add('delete-btn');
+deleteBtn.textContent = 'Delete';
+mainTitleDiv.appendChild(deleteBtn);
 
 const addTaskDiv = document.createElement('div');
 addTaskDiv.classList.add('add-task-div');
