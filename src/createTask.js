@@ -1,5 +1,9 @@
 import {taskPopup} from './taskPopup.js';
 
+// add checkbox to check when task is done
+// task should not be added if inputs are empty
+// add an edit and a delete button to each task
+
 const addTaskBtn = document.querySelector('.add-task-btn');
 addTaskBtn.addEventListener('click', () => {
     const popup = document.querySelector('.task-popup');
@@ -54,7 +58,6 @@ function createTask() {
         taskDueDiv.appendChild(taskDueDate);
 
         const radioInput = document.querySelector("input[type='radio']:checked");
-        console.log(radioInput.value);
         if (radioInput.value == 'red') {
             const taskPriority = document.createElement('div');
             taskPriority.classList.add('red-label');
@@ -68,7 +71,7 @@ function createTask() {
             taskPriority.classList.add('yellow-label')
             taskDueDiv.appendChild(taskPriority);
         }
-        
+
         // checkmark creation for when task is finished below
         // const check = document.createElement('input');
         // check.classList.add('task-check');

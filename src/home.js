@@ -16,15 +16,19 @@ const addProjectDiv = document.createElement('div');
 addProjectDiv.classList.add('add-project-div');
 sidebar.appendChild(addProjectDiv);
 
+const projectBtnDiv = document.createElement('div');
+projectBtnDiv.classList.add('project-btn-div');
+addProjectDiv.appendChild(projectBtnDiv);
+
 const createIcon = document.createElement('img');
 createIcon.classList.add('create-icon');
 // createIcon.src = getCreateIcon;
-addProjectDiv.appendChild(createIcon);
+projectBtnDiv.appendChild(createIcon);
 
 const addProject = document.createElement('p');
 addProject.classList.add('add-project');
 addProject.textContent = 'Add Project';
-addProjectDiv.appendChild(addProject);
+projectBtnDiv.appendChild(addProject);
 
 const firstProject = document.createElement('p');
 firstProject.classList.add('project-names');

@@ -50,11 +50,18 @@ h2 {
 
 .add-project-div {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     gap: 10px;
     color:rgb(127, 162, 173);
     font-size: 1.2rem;
     font-weight: 700;
+}
+
+.project-btn-div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .create-icon {
@@ -69,6 +76,30 @@ h2 {
     font-weight: 700;
     margin: 8px 0;
     color:rgb(13, 58, 72);
+}
+
+/* project popup styles */
+.project-popup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-project-btn {
+    align-self: flex-end;
+    background-color: rgb(127, 162, 173);
+    font-family: 'Mina', sans-serif;
+    color:rgb(13, 58, 72);
+    font-size: 15px;
+    font-weight: 400;
+    border: 1px solid rgb(13, 58, 72);
+    border-radius: 15px;
+    width: 50px;
+    height: 15px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* main styles */
@@ -160,14 +191,6 @@ h2 {
 
 .task-due-date {
     margin: 0;
-}
-
-.task-priority {
-    width: 12px;
-    height: 12px;
-    border: none;
-    border-radius: 50%;
-    background-color: red;
 }
 
 /* task popup styles */
