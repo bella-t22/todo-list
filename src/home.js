@@ -79,8 +79,3 @@ main.appendChild(mainContent);
 const projectCard = document.createElement('div');
 projectCard.classList.add('project-card');
 mainContent.appendChild(projectCard);
-
-// create default project for todos to be added to
-// create project button to create new projects
-// create todos button to create new todos
-// drag and drop to change todos placement?

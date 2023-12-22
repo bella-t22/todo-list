@@ -29,7 +29,7 @@ addProjectBtn.addEventListener('click', () => {
         const project = document.createElement('p');
         project.classList.add('project-names');
         project.textContent = input.value;
-        return sidebar.appendChild(project);
+        sidebar.appendChild(project);
 
         // create individual project card for every new project and give it a unique class?
         // const mainContent = document.querySelector('.main-content');
@@ -38,6 +38,8 @@ addProjectBtn.addEventListener('click', () => {
         // mainContent.appendChild(projectCard);
 
         // close popup once add button is pressed.
+        const popup = document.querySelector('.project-popup');
+        popup.classList.add('hidden');
+        return;
     }
 });
-
