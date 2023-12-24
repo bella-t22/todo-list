@@ -1,3 +1,6 @@
+import Project from './project-class.js';
+import {projects} from './project-data.js';
+
 function projectPopup() {
     const popup = document.querySelector('.project-popup');
 
@@ -15,6 +18,26 @@ function projectPopup() {
     submit.classList.add('add-project-btn');
     submit.textContent = 'Add';
     popup.appendChild(submit);
+
+    submit.addEventListener('click', addProject);
+
+}
+
+function addProject() {
+    const input = document.querySelector('.project-name-input');
+    const proj = new Project(input.value);
+    projects.push(proj);
+
+    const sidebar = document.querySelector('.sidebar');
+
+    const projectEl = document.createElement('p');
+    projectEl.classList.add('project-names');
+    projectEl.textContent = input.value;
+    sidebar.appendChild(projectEl);
+
+    const projectPopupDiv = document.querySelector('.project-popup');
+    projectPopupDiv.innerHTML = '';
+    return;
 }
 
 export {projectPopup};
