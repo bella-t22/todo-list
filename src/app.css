@@ -58,17 +58,18 @@ h2 {
     font-weight: 700;
 }
 
+.add-project {
+    background-color: rgb(208, 231, 237);
+    border: none;
+    color:rgb(127, 162, 173);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
 .project-btn-div {
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.create-icon {
-    height: 36px;
-    width: 36px;
-    background-color: rgb(127, 162, 173);
-    border: none;
 }
 
 .project-names {
@@ -153,11 +154,6 @@ h2 {
     color: rgb(208, 231, 237);
     font-size: 2.5rem;
     margin: 0;
-}
-
-.project-due-date {
-    color:rgb(208, 231, 237);
-    font-size: 1.5rem;
 }
 
 .main-btns-div {

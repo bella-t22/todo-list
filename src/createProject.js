@@ -1,44 +1,63 @@
+import {projectPopup} from './project-popup.js';
+
+// add in default project to this.
+const projects = [];
+
+class Project {
+    constructor(name) {
+        this.name = name;
+    }
+
+    addTask() {
+
+    }
+
+    edit(name) {
+        this.name = name;
+    }
+
+    delete(name) {
+        projects.forEach((project) => {
+            if (project.name == name) {
+                const index = projects.indexOf(project);
+                projects.splice(index, 1);
+                return;
+            }
+        })
+    }
+}
+
 const addProjectBtn = document.querySelector('.add-project');
-
 addProjectBtn.addEventListener('click', () => {
-    const addProjectDiv = document.querySelector('.add-project-div');
+    checkPopup();
 
-    const popup = document.createElement('div');
-    popup.classList.add('project-popup');
-    addProjectDiv.appendChild(popup);
-
-    const inputLabel = document.createElement('label');
-    inputLabel.classList.add('project-input-label');
-    inputLabel.textContent = 'Project Name:';
-    popup.appendChild(inputLabel);
-
-    const input = document.createElement('input');
-    input.classList.add('form-input');
-    popup.appendChild(input);
-
-    const submit = document.createElement('btn');
-    submit.classList.add('add-project-btn');
-    submit.textContent = 'Add';
-    popup.appendChild(submit);
-
+    const submit = document.querySelector('.add-project-btn');
     submit.addEventListener('click', addProject);
-
     function addProject() {
+        const input = document.querySelector('.project-name-input');
+        console.log(input.value)
+        const proj = new Project(input.value);
+        projects.push(proj);
+        console.log(projects);
+    
         const sidebar = document.querySelector('.sidebar');
-
-        const project = document.createElement('p');
-        project.classList.add('project-names');
-        project.textContent = input.value;
-        sidebar.appendChild(project);
-
-        // create individual project card for every new project and give it a unique class?
-        // const mainContent = document.querySelector('.main-content');
-        // const projectCard = document.createElement('div');
-        // projectCard.classList.add('project-card');
-        // mainContent.appendChild(projectCard);
-
-        const popup = document.querySelector('.project-popup');
-        popup.classList.add('hidden');
+    
+        const projectEl = document.createElement('p');
+        projectEl.classList.add('project-names');
+        projectEl.textContent = input.value;
+        sidebar.appendChild(projectEl);
+    
+        const projectPopupDiv = document.querySelector('.project-popup');
+        projectPopupDiv.innerHTML = '';
         return;
     }
 });
+
+const checkPopup = () => {
+    const inputLabel = document.querySelector('.project-input-label');
+    if (inputLabel) {
+        return;
+    } else {
+        projectPopup();
+    }
+}
