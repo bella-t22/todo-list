@@ -1,31 +1,6 @@
 import {projectPopup} from './project-popup.js';
-
-// add in default project to this.
-const projects = [];
-
-class Project {
-    constructor(name) {
-        this.name = name;
-    }
-
-    addTask() {
-
-    }
-
-    edit(name) {
-        this.name = name;
-    }
-
-    delete(name) {
-        projects.forEach((project) => {
-            if (project.name == name) {
-                const index = projects.indexOf(project);
-                projects.splice(index, 1);
-                return;
-            }
-        })
-    }
-}
+import Project from './project-class.js';
+import {projects} from './project-data.js';
 
 const addProjectBtn = document.querySelector('.add-project');
 addProjectBtn.addEventListener('click', () => {
