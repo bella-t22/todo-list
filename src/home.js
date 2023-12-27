@@ -1,3 +1,5 @@
+import addFirstProject from "./first-project";'./first-project.js';
+
 const header = document.querySelector('.header');
 const sidebar = document.querySelector('.sidebar');
 const main = document.querySelector('.main');
@@ -27,19 +29,11 @@ const popup = document.createElement('div');
 popup.classList.add('project-popup');
 addProjectDiv.appendChild(popup);
 
-const firstProject = document.createElement('p');
-firstProject.classList.add('project-names');
-firstProject.textContent = 'First Project';
-sidebar.appendChild(firstProject);
-
 const mainTitleDiv = document.createElement('div');
 mainTitleDiv.classList.add('main-title-div');
 main.appendChild(mainTitleDiv);
 
-const mainTitle = document.createElement('h1');
-mainTitle.classList.add('main-title');
-mainTitle.textContent = 'First Project';
-mainTitleDiv.appendChild(mainTitle);
+addFirstProject();
 
 const mainBtnsDiv = document.createElement('div');
 mainBtnsDiv.classList.add('main-btns-div');

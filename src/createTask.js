@@ -105,7 +105,7 @@ function getProject() {
     for(const project of projects){
         console.log(project)
         if (project.name === mainTitle.textContent) {
-            return project
+            return project;
         }  
     }
 }
