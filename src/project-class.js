@@ -1,12 +1,15 @@
 import {projects} from './project-data';
+import Task from './task-class.js';
 
 export default class Project {
     constructor(name) {
         this.name = name;
+        this.tasks = [];
     }
 
-    addTask() {
-
+    addTask(title, desc, date, priority) {
+        const task = new Task(title, desc, date, priority);
+        this.tasks.push(task);
     }
 
     edit(name) {

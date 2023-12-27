@@ -1,4 +1,5 @@
 import {taskPopup} from './taskPopup.js';
+import {projects} from './project-data.js';
 
 // add checkbox to check when task is done
 // task should not be added if inputs are empty
@@ -16,16 +17,10 @@ addTaskBtn.addEventListener('click', () => {
     // button should not be allowed to be pressed if inputs are empty.
     const submitTask = document.querySelector('.submit-task');
     submitTask.addEventListener('click', createTask);
-
-    // const taskForm = document.querySelector('.task-form');
-    // taskForm.addEventListener('submit', (e) => {
-    //     console.log('hello there');
-    //     createTask();
-    //     e.preventDefault();
-    // });
 });
 
 function createTask() {
+
     const projectCard = document.querySelector('.project-card');    
         const task = document.createElement('div');
         task.classList.add('task');
@@ -96,7 +91,21 @@ function createTask() {
         // check.type = 'checkbox';
         // task.appendChild(check);
 
+        const project = getProject();
+        console.log(project);
+        project.addTask(taskInput.value, descInput.value, dateInput.value, radioInput.value);
+
         taskInput.value = '';
         descInput.value = '';
         dateInput.value = '';
+}
+
+function getProject() {
+    const mainTitle = document.querySelector('.main-title');
+    for(const project of projects){
+        console.log(project)
+        if (project.name === mainTitle.textContent) {
+            return project
+        }  
+    }
 }

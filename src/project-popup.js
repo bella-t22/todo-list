@@ -1,5 +1,6 @@
 import Project from './project-class.js';
 import {projects} from './project-data.js';
+import {displayProject} from './display-project.js';
 
 function projectPopup() {
     const popup = document.querySelector('.project-popup');
@@ -20,13 +21,13 @@ function projectPopup() {
     popup.appendChild(submit);
 
     submit.addEventListener('click', addProject);
-
 }
 
 function addProject() {
     const input = document.querySelector('.project-name-input');
     const proj = new Project(input.value);
     projects.push(proj);
+    console.log(projects);
 
     const sidebar = document.querySelector('.sidebar');
 
@@ -34,6 +35,10 @@ function addProject() {
     projectEl.classList.add('project-names');
     projectEl.textContent = input.value;
     sidebar.appendChild(projectEl);
+
+    projectEl.addEventListener('click', () => {
+        displayProject(proj);
+    })
 
     const projectPopupDiv = document.querySelector('.project-popup');
     projectPopupDiv.innerHTML = '';
