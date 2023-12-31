@@ -6,7 +6,6 @@ export default function addFirstProject() {
     const name = 'First Project';
     const proj = new Project(name);
     projects.push(proj);
-    console.log(projects);
 
     const sidebar = document.querySelector('.sidebar');
 
@@ -16,15 +15,14 @@ export default function addFirstProject() {
     sidebar.appendChild(projectEl);
 
     const mainTitleDiv = document.querySelector('.main-title-div');
-    console.log(mainTitleDiv);
     const mainTitle = document.createElement('h1');
     mainTitle.classList.add('main-title');
     mainTitle.textContent = 'First Project';
     mainTitleDiv.appendChild(mainTitle);
 
-    // projectEl.addEventListener('click', () => {
-    //     displayProject(proj);
-    // })
+    projectEl.addEventListener('click', () => {
+        displayProject(proj);
+    });
 
     const projectPopupDiv = document.querySelector('.project-popup');
     projectPopupDiv.innerHTML = '';

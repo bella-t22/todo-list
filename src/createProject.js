@@ -1,6 +1,4 @@
 import {projectPopup} from './project-popup.js';
-import Project from './project-class.js';
-import {projects} from './project-data.js';
 
 const addProjectBtn = document.querySelector('.add-project');
 addProjectBtn.addEventListener('click', () => {

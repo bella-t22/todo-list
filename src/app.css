@@ -132,6 +132,7 @@ h2 {
     font-weight: 700;
     background-color:rgb(13, 58, 72);
     color:rgb(208, 231, 237);
+    margin: 10px 0;
 }
 
 .done-btn {
@@ -145,6 +146,7 @@ h2 {
     width: 70px;
     height: 30px;
     padding: 5px;
+    align-self: center;
     display: flex;
     align-items: center;
     justify-content: center;
