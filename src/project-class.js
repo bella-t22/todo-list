@@ -16,9 +16,9 @@ export default class Project {
         this.name = name;
     }
 
-    delete(name) {
+    delete(proj) {
         projects.forEach((project) => {
-            if (project.name == name) {
+            if (project.name == proj.name) {
                 const index = projects.indexOf(project);
                 projects.splice(index, 1);
                 return;

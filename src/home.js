@@ -29,9 +29,13 @@ const popup = document.createElement('div');
 popup.classList.add('project-popup');
 addProjectDiv.appendChild(popup);
 
+const mainWrap = document.createElement('div');
+mainWrap.classList.add('main-wrap');
+main.appendChild(mainWrap);
+
 const mainTitleDiv = document.createElement('div');
 mainTitleDiv.classList.add('main-title-div');
-main.appendChild(mainTitleDiv);
+mainWrap.appendChild(mainTitleDiv);
 
 addFirstProject();
 
@@ -51,7 +55,7 @@ mainBtnsDiv.appendChild(deleteBtn);
 
 const addTaskDiv = document.createElement('div');
 addTaskDiv.classList.add('add-task-div');
-main.appendChild(addTaskDiv);
+mainWrap.appendChild(addTaskDiv);
 
 const addTaskBtn = document.createElement('button');
 addTaskBtn.classList.add('add-task-btn');
@@ -60,7 +64,7 @@ addTaskDiv.appendChild(addTaskBtn);
 
 const mainContent = document.createElement('div');
 mainContent.classList.add('main-content');
-main.appendChild(mainContent);
+mainWrap.appendChild(mainContent);
 
 const projectCard = document.createElement('div');
 projectCard.classList.add('project-card');

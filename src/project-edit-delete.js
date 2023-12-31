@@ -1,4 +1,3 @@
-import Project from './project-class.js';
 import {projects} from './project-data.js';
 
 const editProject = document.querySelector('.edit-btn');
@@ -48,10 +47,26 @@ const getProjEl = (proj) => {
     const projectElements = document.querySelectorAll('.project-names');
     for (const projectEl of projectElements) {
         if (projectEl.textContent == proj.name) {
-            console.log('Project El: ', projectEl);
             return projectEl;
         }
     }
 }
 
 const deleteProject = document.querySelector('.delete-btn');
+deleteProject.addEventListener('click', () => {
+    const proj = getProj();
+    const projEl = getProjEl(proj);
+    proj.delete(proj);
+
+    const main = document.querySelector('.main');
+    const mainWrap = document.querySelector('.main-wrap');
+    mainWrap.classList.add('hidden');
+    const empty = document.createElement('p');
+    empty.classList.add('empty');
+    empty.textContent = 'Click on a project to display...';
+    main.appendChild(empty);
+
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.removeChild(projEl);
+    return;
+})

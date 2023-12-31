@@ -212,6 +212,13 @@ h2 {
     font-weight: 700;
 }
 
+.empty {
+    color: rgb(127, 162, 173);
+    text-shadow: 2px 2px rgb(208, 231, 237);
+    font-size: 1.8rem;
+    font-style: italic;
+}
+
 /* project styles */
 .main-content {
     display: flex;

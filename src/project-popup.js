@@ -27,7 +27,6 @@ function addProject() {
     const input = document.querySelector('.project-name-input');
     const proj = new Project(input.value);
     projects.push(proj);
-    console.log(projects);
 
     const sidebar = document.querySelector('.sidebar');
 
