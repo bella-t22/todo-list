@@ -2,6 +2,10 @@ import {projects} from './project-data.js';
 
 const editProject = document.querySelector('.edit-btn');
 editProject.addEventListener('click', () => {
+    checkEditDiv();
+})
+
+const editPopup = () => {
     const mainTitleDiv = document.querySelector('.main-title-div');
     const mainTitle = document.querySelector('.main-title');
     mainTitle.classList.add('hidden');
@@ -32,7 +36,7 @@ editProject.addEventListener('click', () => {
         projectEl.textContent = editInput.value;
         return;
     })
-})
+}
 
 const getProj = () => {
     const mainTitle = document.querySelector('.main-title');
@@ -70,3 +74,12 @@ deleteProject.addEventListener('click', () => {
     sidebar.removeChild(projEl);
     return;
 })
+
+const checkEditDiv = () => {
+    const editDiv = document.querySelector('.edit-div');
+    if (editDiv) {
+        return;
+    } else {
+        editPopup();
+    }
+}
