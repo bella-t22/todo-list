@@ -1,7 +1,7 @@
 import {taskPopup} from './taskPopup.js';
 import {projects} from './project-data.js';
 import Task from './task-class.js';
-import { editTask } from './task-edit-delete.js';
+import { editTask, deleteTask } from './task-edit-delete.js';
 
 setTimeout(() => {
     const addTaskBtn = document.querySelector('.add-task-btn');
@@ -72,6 +72,8 @@ function createTask(arg) {
         deleteBtn.textContent = 'Delete';
         btnDiv.appendChild(deleteBtn);
 
+        deleteBtn.addEventListener('click', deleteTask);
+
         if(arg instanceof Task) {
             displayTaskValues(taskTitle, taskDesc, taskDueDate, taskDueDiv, arg)
         } else {
@@ -118,7 +120,6 @@ function displayTaskValues (title, desc, date, taskDueDiv, obj){
 function getProject() {
     const mainTitle = document.querySelector('.main-title');
     for(const project of projects){
-        console.log(project)
         if (project.name === mainTitle.textContent) {
             return project;
         }  

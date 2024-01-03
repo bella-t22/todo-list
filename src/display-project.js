@@ -5,7 +5,7 @@ export const displayProject = (proj) => {
     const projectCard = document.querySelector('.project-card');
     const empty = document.querySelector('.empty');
 
-    if (!empty.classList.contains('hidden')) {
+    if (empty && !empty.classList.contains('hidden')) {
         empty.classList.add('hidden');
 
         const mainWrap = document.querySelector('.main-wrap');
@@ -16,7 +16,6 @@ export const displayProject = (proj) => {
 
     projectCard.innerHTML = '';
     for (let i = 0; i < proj.tasks.length; i++) {
-        console.log(proj.tasks[i])
         createTask(proj.tasks[i]);
     }
 }

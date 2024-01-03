@@ -1,4 +1,5 @@
 import {projects} from './project-data.js';
+import { displayProject } from './display-project.js';
 
 function editTask() {
     const taskHeader = document.querySelector('.task-header');
@@ -42,26 +43,34 @@ function editTask() {
         taskDesc.classList.remove('hidden');
         editTaskBtn.classList.remove('hidden');
     })
+}
 
-    const getProj = () => {
-        const mainTitle = document.querySelector('.main-title');
-        for (const proj of projects) {
-            if (proj.name === mainTitle.textContent) {
-                return proj;
-            }
-        }
-    }
-
-    const getTask = () => {
-        const proj = getProj();
-        const tasks = proj.tasks;
-        const taskTitle = document.querySelector('.task-title');
-        for (const task of tasks) {
-            if (task.title === taskTitle.textContent) {
-                return task;
-            }
+const getProj = () => {
+    const mainTitle = document.querySelector('.main-title');
+    for (const proj of projects) {
+        if (proj.name === mainTitle.textContent) {
+            return proj;
         }
     }
 }
 
-export {editTask};
+const getTask = () => {
+    const proj = getProj();
+    const tasks = proj.tasks;
+    const taskTitle = document.querySelector('.task-title');
+    for (const task of tasks) {
+        if (task.title === taskTitle.textContent) {
+            return task;
+        }
+    }
+}
+
+const deleteTask = () => {
+    const proj = getProj();
+    const task = getTask();
+    task.delete(proj, task);
+
+    displayProject(proj);
+}
+
+export {editTask, deleteTask};
