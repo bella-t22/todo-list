@@ -12,13 +12,22 @@ addTaskBtn.addEventListener('click', () => {
     } else {
         taskPopup();
     }
-    // button should not be allowed to be pressed if inputs are empty.
+  
     const submitTask = document.querySelector('.submit-task');
     submitTask.addEventListener('click', createTask);
 }), 500
 })
 
 function createTask(arg) {
+    const taskInput = document.querySelector('.task-input');
+    const error = document.querySelector('.title-error');
+
+    if (taskInput.value === '') {
+        error.textContent = 'Must add a title.';
+        error.classList.remove('hidden');
+        return;
+    }
+
     const projectCard = document.querySelector('.project-card');    
         const task = document.createElement('div');
         task.classList.add('task');
@@ -30,7 +39,6 @@ function createTask(arg) {
 
         const taskTitle = document.createElement('h3');
         taskTitle.classList.add('task-title');
-        const taskInput = document.querySelector('.task-input');
 
         taskHeader.appendChild(taskTitle);
 
@@ -84,6 +92,9 @@ function createTask(arg) {
         taskInput.value = '';
         descInput.value = '';
         dateInput.value = '';
+        if (!error.classList.contains('hidden')) {
+            error.classList.add('hidden');
+        }
 }
 
 function setValues (task, desc, date, radio, taskInput, descInput, dateInput) {
