@@ -275,6 +275,29 @@ h2 {
     gap: 10px;
 }
 
+.edit-title-input {
+    background-color: rgb(127, 162, 173);
+    border: none;
+    border-bottom: 1px solid rgb(13, 58, 72);
+    width: 200px;
+    height: 25px;
+    color:rgb(13, 58, 72);
+    font-family: 'Mina', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.edit-desc-input {
+    background-color: rgb(127, 162, 173);
+    border: none;
+    border-bottom: 1px solid rgb(13, 58, 72);
+    width: 300px;
+    height: 20px;
+    color:rgb(13, 58, 72);
+    font-family: 'Mina', sans-serif;
+}
+
 .edit-task-btn {
     background-color: rgb(208, 231, 237);
     font-family: 'Mina', sans-serif;
@@ -287,6 +310,20 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.task-done-btn {
+    background-color: rgb(208, 231, 237);
+    font-family: 'Mina', sans-serif;
+    color:rgb(13, 58, 72);
+    border: 1px solid rgb(13, 58, 72);
+    border-radius: 15px;
+    width: 60px;
+    height: 25px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
 .delete-task-btn {

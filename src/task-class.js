@@ -6,11 +6,19 @@ export default class Task {
         this.priority = priority;
     }
 
-    edit() {
-
+    edit(title, desc) {
+        this.title = title;
+        this.desc = desc;
     }
 
-    delete() {
-        
+    delete(proj, task) {
+        const tasks = proj.tasks;
+        for (each of tasks) {
+            if (task.title === each.title) {
+                const index = tasks.indexOf(each);
+                tasks.splice(index, 1);
+                return;
+            }
+        }
     }
 }

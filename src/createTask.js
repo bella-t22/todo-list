@@ -1,6 +1,7 @@
 import {taskPopup} from './taskPopup.js';
 import {projects} from './project-data.js';
 import Task from './task-class.js';
+import { editTask } from './task-edit-delete.js';
 
 setTimeout(() => {
     const addTaskBtn = document.querySelector('.add-task-btn');
@@ -64,6 +65,8 @@ function createTask(arg) {
         editBtn.textContent = 'Edit';
         btnDiv.appendChild(editBtn);
 
+        editBtn.addEventListener('click', editTask);
+
         const deleteBtn = document.createElement('button');
         deleteBtn.classList.add('delete-task-btn');
         deleteBtn.textContent = 'Delete';
@@ -86,7 +89,6 @@ function setValues (task, desc, date, radio, taskInput, descInput, dateInput) {
     task.textContent = taskInput.value;
     desc.textContent = descInput.value;
     date.textContent = dateInput.value;
-    console.log(radio.value);
     project.addTask(taskInput.value, descInput.value, dateInput.value, radio.value);
 }
 
